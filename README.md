@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# ahsanuls-portfolio
-=======
 # Md. Ahsanul Haque - Professional Portfolio
 
 > **Medical Assistant | Health & Development Professional | NGO Program & MEAL Practitioner**
@@ -141,4 +138,3 @@ This project is fully optimized for zero-config deployment on modern static plat
 
 ## 📄 License & Attribution
 Designed & developed for **Md. Ahsanul Haque**. All professional rights reserved.
->>>>>>> bfdc09c (feat: complete professional portfolio website for Md. Ahsanul Haque)
