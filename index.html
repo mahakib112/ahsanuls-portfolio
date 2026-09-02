@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Primary Meta Tags -->
+  <title>Md. Ahsanul Haque | Health & Development Professional</title>
+  <meta name="title" content="Md. Ahsanul Haque | Health & Development Professional" />
+  <meta name="description"
+    content="Professional portfolio of Md. Ahsanul Haque, a Medical Assistant and health and development professional with experience in NGO programs, community health, WASH, MEAL and development work." />
+  <meta name="author" content="Md. Ahsanul Haque" />
+  <meta name="keywords"
+    content="Md. Ahsanul Haque, Medical Assistant, Public Health, NGO Program Management, MEAL, Health and WASH, Community Health, Bangladesh Development Sector" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ahsanulhaque.dev" />
+  <meta property="og:title" content="Md. Ahsanul Haque | Health & Development Professional" />
+  <meta property="og:description"
+    content="Professional portfolio of Md. Ahsanul Haque, a Medical Assistant and health and development professional with 7+ years of experience in NGO programs, community health, WASH, MEAL and development work." />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Theme Initialization to Prevent FOUC -->
+  <script>
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('theme-preference');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.querySelector('meta[name="color-scheme"]').content = theme;
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
