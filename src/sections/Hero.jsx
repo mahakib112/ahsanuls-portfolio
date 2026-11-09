@@ -64,27 +64,39 @@ export function Hero() {
 
           {/* Right Column: Verified Profile Highlights Card */}
           <div className="hero-card">
+            {/* Profile Photo positioned on top right above details and stats */}
+            <div className="hero-photo-wrapper">
+              <img
+                src={profileData.profilePicture}
+                alt={profileData.name}
+                className="hero-profile-photo"
+              />
+            </div>
+
             <div className="hero-card-header">
-              <div className="hero-avatar" aria-hidden="true">
-                <span>MH</span>
-              </div>
               <div className="hero-card-info">
                 <h3>{profileData.name}</h3>
                 <p>Medical Assistant | Health & Development</p>
-                <p style={{ marginTop: '0.2rem', color: 'var(--primary)', fontWeight: 600 }}>
+                <p style={{ marginTop: '0.25rem', color: 'var(--primary)', fontWeight: 600 }}>
                   NGO Program & MEAL Specialist
                 </p>
               </div>
             </div>
 
-            {/* Stats Grid */}
+            {/* Stats Grid - Clickable cards linked to Experience */}
             <div className="hero-stats-grid">
               {profileData.stats.map((stat, idx) => (
-                <div key={idx} className="hero-stat-box">
+                <a
+                  key={idx}
+                  href="#experience"
+                  className="hero-stat-box"
+                  title={`Click to view Experience: ${stat.label}`}
+                  aria-label={`View experience section for ${stat.label}`}
+                >
                   <div className="hero-stat-val">{stat.value}</div>
                   <div className="hero-stat-lbl">{stat.label}</div>
                   <div className="hero-stat-desc">{stat.description}</div>
-                </div>
+                </a>
               ))}
             </div>
           </div>

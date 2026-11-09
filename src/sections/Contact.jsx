@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SectionHeader } from '../components/SectionHeader';
-import { Mail, MapPin, Send, CheckCircle2, Copy, Check, Linkedin, FileDown } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2, Copy, Check, Linkedin, FileDown, Phone } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { profileData } from '../data/profile';
 
 export function Contact() {
@@ -83,6 +84,69 @@ export function Contact() {
                     </>
                   )}
                 </button>
+              </div>
+            </div>
+
+            {/* Mobile & WhatsApp Card */}
+            <div className="contact-info-card">
+              <a
+                href={profileData.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-card-icon"
+                style={{
+                  backgroundColor: 'rgba(37, 211, 102, 0.12)',
+                  color: '#25D366',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  textDecoration: 'none'
+                }}
+                title="Chat on WhatsApp"
+                aria-label="Chat with Md. Ahsanul Haque on WhatsApp"
+              >
+                <WhatsAppIcon size={24} color="#25D366" />
+              </a>
+              <div className="contact-card-content" style={{ flex: 1 }}>
+                <h4>Mobile & WhatsApp</h4>
+                <div className="contact-card-value">
+                  <a
+                    href={profileData.whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}
+                  >
+                    {profileData.phone}
+                  </a>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.6rem', flexWrap: 'wrap' }}>
+                  <a
+                    href={profileData.whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-sm"
+                    style={{
+                      backgroundColor: '#25D366',
+                      color: '#ffffff',
+                      border: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      fontWeight: 600
+                    }}
+                  >
+                    <WhatsAppIcon size={16} color="#ffffff" />
+                    <span>WhatsApp</span>
+                  </a>
+                  <a
+                    href={`tel:${profileData.phoneRaw}`}
+                    className="btn btn-outline btn-sm"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}
+                  >
+                    <Phone size={14} />
+                    <span>Call Now</span>
+                  </a>
+                </div>
               </div>
             </div>
 

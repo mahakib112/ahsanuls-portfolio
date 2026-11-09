@@ -46,8 +46,9 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
   };
 
   return (
-    <header className="header" role="banner">
-      <div className="container header-container">
+    <>
+      <header className="header" role="banner">
+        <div className="container header-container">
         {/* Brand / Logo */}
         <a href="#hero" className="brand" aria-label="Md. Ahsanul Haque Home">
           <div className="brand-icon" aria-hidden="true">
@@ -106,79 +107,80 @@ export function Navbar({ activeSection, theme, toggleTheme }) {
           </button>
         </div>
       </div>
-
-      {/* Mobile Drawer Overlay */}
-      <div
-        className={`mobile-drawer-overlay ${mobileMenuOpen ? 'open' : ''}`}
-        onClick={() => setMobileMenuOpen(false)}
-        aria-hidden="true"
-      />
-
-      {/* Mobile Drawer */}
-      <div
-        className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile Navigation Drawer"
-      >
-        <div className="mobile-drawer-header">
-          <div className="brand">
-            <div className="brand-icon" aria-hidden="true">
-              <HeartPulse size={18} />
-            </div>
-            <div className="brand-text">
-              <span className="brand-name">{profileData.name}</span>
-            </div>
-          </div>
-          <button
-            type="button"
-            className="theme-toggle-btn"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-label="Close menu"
-          >
-            <X size={18} />
-          </button>
-        </div>
-
-        <nav className="mobile-nav-links" aria-label="Mobile Navigation">
-          <a
-            href="#hero"
-            className={`mobile-nav-link ${activeSection === 'hero' ? 'active' : ''}`}
-            onClick={handleLinkClick}
-          >
-            <span>Home</span>
-          </a>
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`mobile-nav-link ${activeSection === item.id ? 'active' : ''}`}
-              onClick={handleLinkClick}
-            >
-              <span>{item.label}</span>
-            </a>
-          ))}
-        </nav>
-
-        <div className="mobile-drawer-footer">
-          <a
-            href={profileData.cvPath}
-            download="Md-Ahsanul-Haque-CV.pdf"
-            className="btn btn-primary"
-            onClick={handleLinkClick}
-          >
-            <FileDown size={18} />
-            <span>Download Official CV</span>
-          </a>
-          <a
-            href="#contact"
-            className="btn btn-secondary"
-            onClick={handleLinkClick}
-          >
-            <span>Get in Touch</span>
-          </a>
-        </div>
-      </div>
     </header>
-  );
+
+    {/* Mobile Drawer Overlay */}
+    <div
+      className={`mobile-drawer-overlay ${mobileMenuOpen ? 'open' : ''}`}
+      onClick={() => setMobileMenuOpen(false)}
+      aria-hidden="true"
+    />
+
+    {/* Mobile Drawer */}
+    <div
+      className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation Drawer"
+    >
+      <div className="mobile-drawer-header">
+        <div className="brand">
+          <div className="brand-icon" aria-hidden="true">
+            <HeartPulse size={18} />
+          </div>
+          <div className="brand-text">
+            <span className="brand-name">{profileData.name}</span>
+          </div>
+        </div>
+        <button
+          type="button"
+          className="theme-toggle-btn"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          <X size={18} />
+        </button>
+      </div>
+
+      <nav className="mobile-nav-links" aria-label="Mobile Navigation">
+        <a
+          href="#hero"
+          className={`mobile-nav-link ${activeSection === 'hero' ? 'active' : ''}`}
+          onClick={handleLinkClick}
+        >
+          <span>Home</span>
+        </a>
+        {navItems.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            className={`mobile-nav-link ${activeSection === item.id ? 'active' : ''}`}
+            onClick={handleLinkClick}
+          >
+            <span>{item.label}</span>
+          </a>
+        ))}
+      </nav>
+
+      <div className="mobile-drawer-footer">
+        <a
+          href={profileData.cvPath}
+          download="Md-Ahsanul-Haque-CV.pdf"
+          className="btn btn-primary"
+          onClick={handleLinkClick}
+        >
+          <FileDown size={18} />
+          <span>Download Official CV</span>
+        </a>
+        <a
+          href="#contact"
+          className="btn btn-secondary"
+          onClick={handleLinkClick}
+        >
+          <span>Get in Touch</span>
+        </a>
+      </div>
+    </div>
+  </>
+);
 }

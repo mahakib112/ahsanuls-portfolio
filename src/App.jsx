@@ -4,6 +4,7 @@ import { useActiveSection } from './hooks/useActiveSection';
 
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
@@ -58,6 +59,7 @@ export function App() {
       </main>
 
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

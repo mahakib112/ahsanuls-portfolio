@@ -3,9 +3,14 @@ export const profileData = {
   headline: "Medical Assistant & Health and Development Professional",
   shortRole: "Medical Assistant | NGO Program & MEAL Practitioner",
   experienceYears: "7+",
-  location: "Khulna / Dhaka, Bangladesh",
-  email: "ahsanulhaque.dev@gmail.com",
-  phonePlaceholder: "+880 1700-000000",
+  location: "Chuadanga, Khulna, Dhaka, Bangladesh",
+  email: "mahakib98@gmail.com",
+  phone: "01797542972",
+  phoneFormatted: "+880 1797-542972",
+  phoneRaw: "+8801797542972",
+  whatsappNumber: "8801797542972",
+  whatsappLink: "https://wa.me/8801797542972",
+  profilePicture: `${import.meta.env.BASE_URL}assets/Md.%20Ahsanul%20Haque%20pic.jpg`,
   cvPath: `${import.meta.env.BASE_URL}assets/Md-Ahsanul-Haque-CV.pdf`,
   bio: `I am a dedicated Medical Assistant and Health & Development Professional with over 7 years of proven field and program experience across the NGO, community healthcare, and development sectors in Bangladesh. 
 
@@ -13,7 +18,7 @@ With a strong foundation in clinical primary healthcare (DMF) combined with spec
 
 My career is driven by a commitment to public health equity, sustainable WASH interventions, transparent donor reporting, and empowering community stakeholders.`,
   socialLinks: {
-    linkedin: "https://www.linkedin.com/in/md-ahsanul-haque",
+    linkedin: "https://www.linkedin.com/in/mdahsanul112/",
     github: "https://github.com/mahakib112/ahsanuls-portfolio",
     facebook: "https://www.facebook.com"
   },

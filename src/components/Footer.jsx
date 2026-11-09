@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUp, HeartPulse, Mail, MapPin } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { profileData } from '../data/profile';
 
 export function Footer() {
@@ -57,6 +58,16 @@ export function Footer() {
                 <span>{profileData.email}</span>
               </div>
               <a
+                href={profileData.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--text-secondary)', textDecoration: 'none' }}
+                title="Chat on WhatsApp"
+              >
+                <WhatsAppIcon size={16} color="#25D366" />
+                <span>{profileData.phone} (WhatsApp)</span>
+              </a>
+              <a
                 href={profileData.cvPath}
                 download="Md-Ahsanul-Haque-CV.pdf"
                 className="footer-link"
@@ -70,8 +81,21 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
-          <div>
-            © {new Date().getFullYear()} {profileData.name}. All professional rights reserved.
+          <div className="footer-copy-wrapper">
+            <div>
+              © {new Date().getFullYear()} {profileData.name}. All professional rights reserved.
+            </div>
+            <div className="footer-developer-credit">
+              Developed by{' '}
+              <a
+                href="https://www.facebook.com/8citsolution"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="developer-link"
+              >
+                8C IT Solution
+              </a>
+            </div>
           </div>
           <button
             type="button"
